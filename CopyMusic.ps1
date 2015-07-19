@@ -1,7 +1,11 @@
-$dryrun = $false # For testing
-$destinationRoot = $PSScriptRoot
-$iTunesMusicLibrary = 'C:\Users\Josh\Music\iTunes\iTunes Music Library.xml'
-$ffmpeg = $PSScriptRoot + 'ffmpeg'
+#Copyright 2015, Josh Mackey
+
+
+# $PSScriptRoot is a variable holding the same directory as the script.
+$dryrun = $true # If set to $true, will output normally but not actually copy/convert files.
+$destinationRoot = $PSScriptRoot # Set to where you want the songs to be copied to.
+$iTunesMusicLibrary = $env:USERPROFILE + '\Music\iTunes\iTunes Music Library.xml' # path to iTunes's Music Library file.
+$ffmpeg = $PSScriptRoot + 'ffmpeg' # Path to ffmpeg so lossless can be converted to FLAC.
 
 
 <# Do not modify below this line #>
